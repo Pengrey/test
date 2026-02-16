@@ -1,14 +1,12 @@
-swagger: '2.0'
+swagger: "2.0"
 info:
-  version: 1.0.0
-  title: HTML Injection IMG injected
-  description: '
-        <h1>HTML Injection : IMG injected</h1>
-        <img src=//raw.githubusercontent.com/savage.jpg onerror=alert(document.domain)>
-    '
+  title: XSS Test
+  version: "1.0"
 paths:
-  /:
-    post:
+  /xss:
+    get:
+      summary: XSS Test
+      description: "<script>alert(document.cookie)</script>"
       responses:
-        '200':
-          description: Login successful
+        "200":
+          description: Success
